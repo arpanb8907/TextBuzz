@@ -14,7 +14,7 @@ export default function Textbox(props) {
 
     });
     
-
+    
     useEffect(() => {
         
         localStorage.setItem("text", JSON.stringify(text));
@@ -223,11 +223,11 @@ export default function Textbox(props) {
     <>
     <div>
 
-        <div className='container'>
+        <div className='container' style={{color:props.mode==='dark'?'white' :'black'}}>
 
             <div className="my-3">
-            <label htmlFor="exampleFormControlTextarea1" className="form-label"><strong>Create Your text below</strong></label>
-            <textarea className="form-control" id="exampleFormControlTextarea1" rows="3" value={text} onChange={handleonchange}></textarea>
+            <label htmlFor="exampleFormControlTextarea1" className="form-label" ><strong>Create Your text below</strong></label>
+            <textarea className="form-control" id="exampleFormControlTextarea1" style={{backgroundColor:props.mode==='dark'?'#000033' :'white',color:props.mode==='dark'?'white':'black'}}     rows="3" value={text} onChange={handleonchange}></textarea>
             </div>
 
             <button type="button" className="btn btn-primary mx-2 my-2" onClick={touppercase}>Convert uppercase</button>
@@ -241,13 +241,13 @@ export default function Textbox(props) {
             
         </div>
         
-        <div className='container my-2'>
+        <div className='container my-2' style={{color:props.mode==='dark'?'white' :'black'}}>
 
             <p>{countwords()} words and {countchar()} characters</p>
             <p>{countchar()*0.0083} minutes to read</p>
         </div>
 
-        <div className='container my-2'>
+        <div className='container my-2' style={{color:props.mode==='dark'?'white' :'black'}}>
             <h2>Preview</h2>
             <p>{text.length ? text : "Write above to preview"}</p>
            

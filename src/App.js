@@ -8,7 +8,23 @@ import { useState } from 'react';
 function App() {
 
   const [alert,setalert] = useState(null);
+  const [mode,setmode] = useState('light');
 
+  const switchon = ()=>{
+
+    if(mode==='light'){
+      setmode('dark');
+      document.body.style.backgroundColor='black';
+      showalert("darkmode enabled","success");
+    }
+
+    else{
+      setmode('light');
+      document.body.style.backgroundColor='white';
+      showalert("lightmode enabled","success");
+    }
+
+  }
   const showalert = (message,type)=>{
 
       setalert({
@@ -28,12 +44,12 @@ function App() {
       
       
 
-      <Navbar title = "Textbuzz" aboutus="About us"/>
+      <Navbar title = "Textbuzz" aboutus="About us" mode={mode} switchon={switchon}/>
       
   
       <Alert alert={alert}></Alert>
       
-      <Textbox showalert={showalert} >   </Textbox>
+      <Textbox showalert={showalert} mode={mode}>   </Textbox>
 
 
       
