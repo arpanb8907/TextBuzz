@@ -230,14 +230,14 @@ export default function Textbox(props) {
             <textarea className="form-control" id="exampleFormControlTextarea1" rows="3" value={text} onChange={handleonchange}></textarea>
             </div>
 
-            <button type="button" className="btn btn-primary mx-2" onClick={touppercase}>Convert uppercase</button>
-            <button type="button" className="btn btn-primary mx-2"  onClick={tolowercase}>Convert lowercase</button>
-            <button type="button" className="btn btn-primary mx-2"  onClick={Sentencecase}>Sentence Case</button>
-            <button type="button" className="btn btn-primary mx-2"  onClick={RemoveExtraspaces}>Remove Extraspaces</button>
-            <button type="button" className="btn btn-primary mx-2"  onClick={copytext}>Copy text</button>
-            <button type="button" className="btn btn-primary mx-2"  onClick={cleartext}>Clear text</button>
-            <button type="button" className="btn btn-primary mx-2"  onClick={altercase}>Alter Case</button>
-            <button type="button" className="btn btn-primary mx-2"  onClick={downloadTxtFile}>Download</button>
+            <button type="button" className="btn btn-primary mx-2 my-2" onClick={touppercase}>Convert uppercase</button>
+            <button type="button" className="btn btn-primary mx-2 my-2"  onClick={tolowercase}>Convert lowercase</button>
+            <button type="button" className="btn btn-primary mx-2 my-2"  onClick={Sentencecase}>Sentence Case</button>
+            <button type="button" className="btn btn-primary mx-2 my-2"  onClick={RemoveExtraspaces}>Remove Extraspaces</button>
+            <button type="button" className="btn btn-primary mx-2 my-2"  onClick={copytext}>Copy text</button>
+            <button type="button" className="btn btn-primary mx-2 my-2"  onClick={cleartext}>Clear text</button>
+            <button type="button" className="btn btn-primary mx-2 my-2"  onClick={altercase}>Alter Case</button>
+            <button type="button" className="btn btn-primary mx-2 my-2"  onClick={downloadTxtFile}>Download</button>
             
         </div>
         
