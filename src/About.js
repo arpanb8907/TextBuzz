@@ -1,4 +1,5 @@
 import React from 'react'
+import './About.css'; // Import the custom CSS file
 
 export default function About(props) {
   return (
@@ -12,9 +13,9 @@ export default function About(props) {
       </h2>
       <div id="collapseOne" className="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample" style={{backgroundColor:props.mode==='dark'?'#000033' :'white',color:props.mode==='dark'?'white':'black'}}>
         <div className="accordion-body" >
-                A single page web application can be used to create text at your own . Application contains various features like
-        uppercase,lowercase converter , Removing extraspace from text , can download as text file in local device and lot more.
-        Live update of number of words and character and preview the written context below makes this one really user friendly
+                  A single page web application can be used to create text at your own . Application contains various features like
+          uppercase,lowercase converter , Removing extraspace from text , can download as text file in local device and lot more.
+          Live update of number of words and character and preview the written context below makes this one really user friendly
         </div>
       </div>
     </div>

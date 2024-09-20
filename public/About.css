@@ -1,0 +1,37 @@
+/* Custom CSS for the About component */
+
+/* Accordion item style */
+.accordion-item {
+    background-color: #f8f9fa;
+    border: 1px solid #dee2e6;
+    border-radius: 0.25rem;
+    margin-bottom: 10px;
+  }
+  
+  /* Accordion button style */
+  .accordion-button {
+    background-color: #f1f1f1;
+    color: black;
+    font-weight: bold;
+  }
+  
+  /* Accordion content style */
+  .accordion-body {
+    padding: 10px;
+  }
+  
+  /* Dark mode styles */
+  .dark-mode .accordion-item {
+    background-color: #212529;
+    border-color: #343a40;
+  }
+  
+  .dark-mode .accordion-button {
+    background-color: #343a40;
+    color: white;
+  }
+  
+  .dark-mode .accordion-body {
+    color: white;
+  }
+  

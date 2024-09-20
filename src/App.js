@@ -5,7 +5,7 @@ import Textbox from './Textbox';
 import Alert from './Alert';
 import { useState,useEffect } from 'react';
 import About from './About';
-
+import Register from './Register';
 import {
   BrowserRouter as Router,
   Switch,
@@ -15,23 +15,29 @@ import {
 function App() {
 
   const [alert,setalert] = useState(null);
-  const [mode,setmode] = useState('light');
+  //const [mode,setmode] = useState('light');
 
-//   const [mode, setmode] = useState(()=>{
 
-//     const saved = localStorage.getItem("mode");
-//     const initialValue = JSON.parse(saved);
-//     return initialValue ;
+  const [mode, setmode] = useState(()=>{
+
+    const saved = localStorage.getItem("mode");
+    const initialValue = JSON.parse(saved);
+    
+    if(initialValue==='dark') return 'dark';
+
+    return 'light';
     
 
 
-// });
+});
 
 
-// useEffect(() => {
+useEffect(() => {
     
-//     localStorage.setItem("mode", JSON.stringify(mode));
-//   }, [mode]);
+    localStorage.setItem("mode", JSON.stringify(mode));
+  }, [mode]);
+
+  
 
 
   const switchon = ()=>{
@@ -67,21 +73,33 @@ function App() {
     <>
       
     <Router>
-
++
       <Navbar title = "Textbuzz" aboutus="About us" mode={mode} switchon={switchon}/>
       
-  
+      
       <Alert alert={alert}></Alert>
       
       <Switch>
+
+          
+
           <Route path="/about">
             <About mode={mode} switchon={switchon}/>
           </Route>
           
+          <Route path="/register">
+            <Register/>
+          
+          </Route>
           <Route path="/">
             <Textbox mode={mode} showalert={showalert}/>
           
           </Route>
+
+          
+
+
+
       </Switch>
 
 
